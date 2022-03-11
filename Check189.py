@@ -8,6 +8,13 @@ import time
 
 import platform  ##获取系统版本
 import socket  ##获取ip
+import urllib.request  ##爬取网页
+
+##爬取网页
+page = urllib.request.urlopen('http://api.sms1086.com/')   
+contents = page.read()   
+#获得了整个网页的内容也就是源代码  
+print(contents)
 
 ##获取系统版本  开始
 print('当前主机的IP为: ' + socket.gethostbyname(socket.gethostname()))
