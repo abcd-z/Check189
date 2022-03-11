@@ -10,12 +10,13 @@ import platform  ##获取系统版本
 import socket  ##获取ip
 import urllib.request  ##爬取网页
 
+'''
 ##爬取网页
 page = urllib.request.urlopen('https://proxy.yugogo.xyz/clash/proxies?c=HK,TW,US,JP,SG')   
 contents = page.read()   ##获得了整个网页的内容也就是源代码  
 print("=HK,TW,US,JP,SG节点")
 print(contents)         ##打印网页内容
-
+'''
 s = requests.Session()
 
 username = ""
