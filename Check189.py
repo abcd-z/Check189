@@ -12,9 +12,7 @@ username = ""
 password = ""
 
 if username == "" or password == "":
-   username = input("账号：")
-##    username = base64.b64decode(input("账号："))
-
+    username = input("账号：")
     print(username[:3] + '****' + username[7:])
     password = input("密码：")
 
