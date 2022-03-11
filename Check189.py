@@ -12,33 +12,9 @@ import urllib.request  ##爬取网页
 
 ##爬取网页
 page = urllib.request.urlopen('http://api.sms1086.com/')   
-contents = page.read()   
-#获得了整个网页的内容也就是源代码  
-print(contents)
+contents = page.read()   ##获得了整个网页的内容也就是源代码  
+print(contents)         ##打印网页内容
 
-##获取系统版本  开始
-print('当前主机的IP为: ' + socket.gethostbyname(socket.gethostname()))
-def get_system_Platform():
-    print ('system and bit'.center(40,'-'))
-    print(platform.architecture())
-    print ('system and deatial'.center(40,'-'))
-    print(platform.platform())
-    print ('system'.center(40,'-'))
-    print(platform.system())
-    print ("python Version".center(40,'-'))
-    print(platform.python_version())
-
-def myPlatform():
-  sysstr = platform.system()
-  if(sysstr =="Windows"):
-    print ("my platform is:"+"Windows platform".center(40,'-'))
-  elif(sysstr == "Linux"):
-    print ("my platform is:"+"Linux platform".center(40,'-'))
-  else:
-    print ("my platform is:"+"Others platform".center(40,'-'))
-get_system_Platform()
-myPlatform()
-##获取系统版本  结束
 s = requests.Session()
 
 username = ""
