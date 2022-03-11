@@ -6,8 +6,11 @@ import requests
 import rsa
 import time
 
-import platform  
+import platform  ##获取系统版本
+import socket  ##获取ip
+
 ##获取系统版本  开始
+print('当前主机的IP为: ' + socket.gethostbyname(socket.gethostname()))
 def get_system_Platform():
     print ('system and bit'.center(40,'-'))
     print(platform.architecture())
