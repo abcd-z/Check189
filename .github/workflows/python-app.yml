@@ -36,6 +36,7 @@ jobs:
         WorkWeiBot="${{ secrets.WWBOT }}"
         DingDingBot="${{ secrets.DINGDINGBOT }}"
         SCKEY="${{ secrets.SCKEY }}"
+        '''
         function WorkWei()
         {
           echo -n "企业微信机器人："
@@ -50,6 +51,7 @@ jobs:
             }'
           echo .
         }
+        '''
         function DingDing()
         {
           echo -n "钉钉机器人："
@@ -64,6 +66,7 @@ jobs:
             }'
           echo .
         }
+        '''
         function FTQQ()
         {
           echo -n "Server酱："
@@ -79,6 +82,7 @@ jobs:
             -d "${data}"
           echo .
         }
+        '''
         user="${{ secrets.USER }}"
         pwd="${{ secrets.PWD }}"
         user_list=()
@@ -127,6 +131,8 @@ jobs:
         result="${result}\n${r}"
         echo "----------"
         done
+        '''
         [ g"${WorkWeiBot}" != g"" ] && WorkWei "${result}" || echo "未设置企业微信通知"
         [ g"${DingDingBot}" != g"" ] && DingDing "${result}" || echo "未设置钉钉通知"
         [ g"${SCKEY}" != g"" ] && FTQQ "天翼签到" "${result}" || echo "未设置Server酱通知"
+        '''
