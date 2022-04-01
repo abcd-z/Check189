@@ -19,7 +19,6 @@ print(contents)         ##打印网页内容
 '''
 page = urllib.request.urlopen('https://proxy.yugogo.xyz/clash/proxies?c=HK')  
 contents = page.read()   ##获得了整个网页的内容也就是源代码  
-print("yugogo HK节点")
 print(contents)         ##打印网页内容
 
 
