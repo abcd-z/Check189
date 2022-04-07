@@ -12,12 +12,12 @@ import urllib.request  ##爬取网页
 
 '''
 ##爬取网页
-page = urllib.request.urlopen('https://proxy.yugogo.xyz/clash/proxies?c=HK,TW,US,JP,SG')   
+page = urllib.request.urlopen('https://sspool.herokuapp.com/clash/proxies?c=CN,HK,TW')   
 contents = page.read()   ##获得了整个网页的内容也就是源代码  
 print("=HK,TW,US,JP,SG节点")
 print(contents)         ##打印网页内容
 '''
-page = urllib.request.urlopen('https://proxy.yugogo.xyz/clash/proxies?c=HK')  
+page = urllib.request.urlopen('https://sspool.herokuapp.com/clash/proxies?c=CN,HK,TW')  
 contents = page.read()   ##获得了整个网页的内容也就是源代码  
 print(contents)         ##打印网页内容
 
