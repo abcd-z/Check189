@@ -178,7 +178,7 @@ def login(username, password):
     redirect_url = r.json()['toUrl']
     r = s.get(redirect_url)
     return s
-
+     
 
 if __name__ == "__main__":
     main()
